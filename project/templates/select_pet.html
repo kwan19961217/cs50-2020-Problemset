@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Select Pet
+{% endblock %}
+
+{% block main %}
+<div class="row row-cols-1 row-cols-md-3">
+  {% for row in rows %}
+  <div class="col mb-4">
+    <div class="card h-100 mx-auto">
+      <img src="{{row["pet_photo"]}}" class="card-img-top" alt="{{row["color"]}} {{row["pattern"]}} {{row["breeds"]}} {{row["species"]}}">
+      <div class="card-body">
+        <h5 class="card-title">{{row["pet_name"]}}
+        {% if row["gender"] == "Male" %}
+        <img src="/static/pictures/male.png">
+        {% elif row["gender"] == "Female" %}
+        <img src="/static/pictures/female.png">
+        {% endif %}
+        </h5>
+        <p class="owner-text">Owner: {{row["name"]}}</p>
+        {% if row["email"] %}
+        <p class="owner-text">Email: {{row["email"]}}</p>
+        {% endif %}
+        {% if row["mb_no"] %}
+        <p class="owner-text">Mobile: +{{row["mb_region"]}}-{{row["mb_no"]}}</p>
+        {% endif %}
+        {% if row["age"] %}
+        <p class="card-text">Age: {{row["age"]}}</p>
+        {% else %}
+        <p class="card-text">Age: N/A</p>
+        {% endif %}
+        {% if row["city"] %}
+        <p class="card-text">Location: {{row["district"]}}, {{row["city"]}}</small></p>
+        {% else %}
+        <p class="card-text">Location: N/A</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete Pet
+{% endblock %}
+
+{% block main %}
+    <form action="/delete_pet" method="post">
+        <div class="form-group">
+            <select class="form-control is-valid" name="pet_name" id="validationCustom04" required>
+                <option selected disabled value="">Choose...</option>
+                {% for row in rows %}
+                <option>{{row["pet_name"]}}</option>
+                {% endfor%}
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form>
+{% endblock %}

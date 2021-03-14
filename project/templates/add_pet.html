@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Pet
+{% endblock %}
+
+{% block main %}
+    <form action="/add_pet" method="post">
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Name</span>
+            </div>
+            <input autocomplete="off" autofocus class="form-control" name="pet_name" placeholder="Pet Name" type="text" REQUIRED>
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Gender</span>
+            </div>
+            <select class="custom-select" name="gender" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Age</span>
+            </div>
+            <input class="form-control" name="age" placeholder="Age" type="text">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Species</span>
+            </div>
+            <input class="form-control" name="species" placeholder="Species" type="text">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Breeds</span>
+            </div>
+            <input class="form-control" name="breeds" placeholder="Breeds" type="text">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Photo</span>
+            </div>
+            <input class="form-control" name="pet_photo" placeholder="Photo url" type="url">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Color</span>
+            </div>
+            <input class="form-control" name="color" placeholder="Color" type="text">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Pattern</span>
+            </div>
+            <input class="form-control" name="pattern" placeholder="Pattern" type="text">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">City</span>
+            </div>
+            <input class="form-control" name="city" placeholder="City" type="text">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">District</span>
+            </div>
+            <input class="form-control" name="district" placeholder="District" type="text">
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}

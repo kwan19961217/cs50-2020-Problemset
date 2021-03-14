@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update
+{% endblock %}
+
+{% block main %}
+    <form action="/update" method="post">
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Name</span>
+            </div>
+            <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Name" value="{{row[0]["name"]}}" type="text" REQUIRED>
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Photo Url</span>
+            </div>
+            <input class="form-control" name="photo" placeholder="Photo url" type="url" value="{{row[0]["photo"]}}">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Country Code</span>
+                <span class="input-group-text">+</span>
+            </div>
+            <input class="form-control" name="mb_region" placeholder="Region" type="int" value="{{row[0]["mb_region"]}}">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Mobile Number</span>
+                <span class="input-group-text">-</span>
+            </div>
+            <input class="form-control" name="mb_no" placeholder="Number" type="int" value="{{row[0]["mb_no"]}}">
+            </p>
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Email</span>
+            </div>
+            <input class="form-control" name="email" placeholder="Email" type="email" value="{{row[0]["email"]}}">
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}

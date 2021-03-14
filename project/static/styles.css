@@ -1,0 +1,124 @@
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+.card-img-top
+{
+    height: 100%;
+    max-height: 150px;
+    width: auto;
+    object-fit: cover;
+}
+
+.card-text
+{
+    text-align: justify;
+}
+
+.owner-text
+{
+    text-align: center;
+    color: grey;
+    line-height: 0.2;
+    font-size: 8px;
+}
+
+
+.card
+{
+    width: 15rem;
+}
+
+.navbar
+{
+    background-color: #feeeed;
+}
+
+
+
+#title
+{
+    font-family: 'Chewy', cursive;
+}
+
+body
+{
+    background-image: url('pictures/bg30.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media (min-width: 1024px){
+    .card
+    {
+        width: 22rem;
+    }
+
+    .card-img-top
+    {
+        height: 100%;
+        max-height: 250px;
+        width: auto;
+        object-fit: cover;
+    }
+
+    .owner-text
+    {
+        text-align: right;
+        color: grey;
+        line-height: 0.2;
+        font-size: 8px;
+    }
+
+    #searchpetbar
+    {
+        margin-left: 10px;
+    }
+
+    .col {
+        height: 100%;
+    }
+}
+
+.user-email {
+    text-align: justify;
+    line-height: 0.2;
+    font-size: 8px;
+}
+
+.user-mobile {
+    text-align: justify;
+    line-height: 0.2;
+    font-size: 8px;
+}
+
+#pet_button {
+    background-color: #a0a0ed;
+    border: 0px;
+    color: white;
+    border-radius: 12px;
+    padding: 5px 10px 5px 10px;
+}
+
+.index {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Chewy', cursive;
+}

@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Pet
+{% endblock %}
+
+{% block main %}
+    <form action="/update_pet" method="post">
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Name</span>
+            </div>
+            <input readonly class="form-control" name="pet_name" placeholder="Pet Name" autocomplete="on" type="text" REQUIRED value={{rows[0]["pet_name"]}}>
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Gender</span>
+            </div>
+            <select class="custom-select" name="gender" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                {% if rows[0]["gender"] == "Male" %}
+                <option selected value="Male">Male</option>
+                <option value="Female">Female</option>
+                {% elif rows[0]["gender"] == "Female" %}
+                <option value="Male">Male</option>
+                <option selected value="Female">Female</option>
+                {% else %}
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                {% endif %}
+            </select>
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Age</span>
+            </div>
+            <input class="form-control" name="age" placeholder="Age" type="text" value="{{rows[0]["age"]}}">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Species</span>
+            </div>
+            <input class="form-control" name="species" placeholder="Species" type="text" value="{{rows[0]["species"]}}">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Breeds</span>
+            </div>
+            <input class="form-control" name="breeds" placeholder="Breeds" type="text" value="{{rows[0]["breeds"]}}">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Photo</span>
+            </div>
+            <input class="form-control" name="pet_photo" placeholder="Photo url" type="url" value="{{rows[0]["pet_photo"]}}">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Color</span>
+            </div>
+            <input class="form-control" name="color" placeholder="Color" type="text" value="{{rows[0]["color"]}}">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Pattern</span>
+            </div>
+            <input class="form-control" name="pattern" placeholder="Pattern" type="text" value="{{rows[0]["pattern"]}}">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">City</span>
+            </div>
+            <input class="form-control" name="city" placeholder="City" type="text" value="{{rows[0]["city"]}}">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">District</span>
+            </div>
+            <input class="form-control" name="district" placeholder="District" type="text" value="{{rows[0]["district"]}}">
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}
