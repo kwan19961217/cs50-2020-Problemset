@@ -1,0 +1,76 @@
+.nav
+{
+    background-color: #F8F7F6;
+}
+
+.nav-link
+{
+    color: grey;
+}
+
+.active
+{
+    color: black;
+    font-weight: bold;
+}
+
+.fixed-bottom
+{
+    background-color: #F8F7F6;
+    color: grey;
+    text-align: center;
+}
+
+.img-right
+{
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width:700px;
+    margin-left: auto;
+}
+
+.img-left
+{
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 700px;
+    margin-right: auto;
+}
+
+h5
+{
+    font-weight: bold;
+    color: lightblue;
+    text-align: center;
+}
+
+.para
+{
+    text-align: justify;
+    line-height: 1.7em;
+}
+
+.card-title
+{
+    color: lightblue;
+}
+
+.card-img-top
+{
+    height: 100%;
+    max-height: 220px;
+    width: auto;
+    object-fit: cover;
+}
+
+.card-text
+{
+    text-align: justify;
+}
+
+#name
+{
+    color: grey;
+}
